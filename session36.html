@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 36</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(skyblue,slateblue);
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz App</h1>
+    </header>
+    <h3>1. What is the capital of Australia?</h3>
+    <label for="">1. Canberra</label>
+    <input type="radio" name="capital" id="" value="canberra">
+    <label for="">2. Sydney</label>
+    <input type="radio" name="capital" id="" value="sydney">
+    <label for="">3. New York</label>
+    <input type="radio" name="capital" id="" value="newyork">
+    <label for="">4. Cape Town</label>
+    <input type="radio" name="capital" id="" value="capetown">
+    <h3>2. What is the chemical formula for water?</h3>
+    <label for="">CO2</label>
+    <input type="radio" name="chemical" id="" value="co2">
+    <label for="">H2O</label>
+    <input type="radio" name="chemical" id="" value="h2o">
+    <label for="">O2</label>
+    <input type="radio" name="chemical" id="" value="o2">
+    <label for="">HCO3</label>
+    <input type="radio" name="chemical" id="" value="hco3">
+    <h3>3. What is the value of pie?</h3>
+    <label for="">3.14</label>
+    <input type="radio" name="pie" id="" value="3.14">
+    <label for="">3.06</label>
+    <input type="radio" name="pie" id="" value="3.06">
+    <label for="">4.01</label>
+    <input type="radio" name="pie" id="" value="4.01">
+    <label for="">9.00</label>
+    <input type="radio" name="pie" id="" value="9.00">
+    <h3>4. Which is the king of fruits?</h3>
+    <label for="">Mango</label>
+    <input type="radio" name="fruit" id="" value="mango">
+    <label for="">Pineapple</label>
+    <input type="radio" name="fruit" id="" value="pineapple">
+    <label for="">Durian</label>
+    <input type="radio" name="fruit" id="" value="durian">
+    <label for="">Apple</label>
+    <input type="radio" name="fruit" id="" value="apple">
+    <h3>5. At what age did the queen of England died?</h3>
+    <label for="">91</label>
+    <input type="radio" name="queen" id="" value="91">
+    <label for="">92</label>
+    <input type="radio" name="queen" id="" value="92">
+    <label for="">93</label>
+    <input type="radio" name="queen" id="" value="93">
+    <label for="">96</label>
+    <input type="radio" name="queen" id="" value="96"><br><br>
+    <a href="session37.html"><button onclick="answer()">Submit 
+        Answer</button></a>
+</body>
+<script>
+    var score  = 0;
+    function answer(){
+        var capital = document.
+        querySelector('input[name="capital"]:checked').value;
+        if(capital == "canberra"){
+            score = score + 1;
+        }
+        var chemical = document.
+        querySelector('input[name="chemical"]:checked').value;
+        if(chemical == "h2o"){
+            score = score + 1;
+        }
+        var pie = document.
+        querySelector('input[name="pie"]:checked').value;
+        if(pie == "3.14"){
+            score = score + 1;
+        }
+        var fruit = document.
+        querySelector('input[name="fruit"]:checked').value;
+        if(fruit == "durian"){
+            score = score + 1;
+        }
+        var queen = document.
+        querySelector('input[name="queen"]:checked').value;
+        if(queen == "96"){
+            score = score + 1;
+        }
+        localStorage.score = score;
+
+    }
+</script>
+</html>

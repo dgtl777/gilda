@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 39</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(pink,hotpink);
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: white;
+        }
+        img{
+            width: 300px;
+            height: 200px;
+            border: 10px solid white;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Riddle App</h1>
+        <h2 id="score">0</h2>
+    </header>
+    <h3>1. What is a room with no windows and no doors?</h3>
+    <input type="text" name="" id="q1">
+    <button onclick="q1()">submit answer</button>
+    <button onclick="h1()">hint</button>
+    <h4 id="result"></h4>
+    <img id="i1" src="https://cdn.pixabay.com/photo/2016/02/24/18/48/mushrooms-1220527__480.jpg" alt="">
+</body>
+<script>
+    var score = 0;
+    function h1(){
+        document.getElementById("i1").style.display = "inline-block"
+    }
+    function q1(){
+        var q1 = (document.getElementById("q1").value).trim();
+        if(q1.toUpperCase() == "MUSHROOM"){
+            document.getElementById("result").innerText = 
+            "correct answer";
+            score = score + 1;
+            document.getElementById("score").innerText = 
+            score;
+        }
+        else{
+            document.getElementById("result").innerText = 
+            "wrong answer"
+        }
+    }
+</script>
+</html>

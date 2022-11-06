@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 37</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(skyblue,slateblue);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: white;
+        }
+        .result{
+            width: 80vw;
+            height: 70vh;
+            background-color: white;
+            margin: auto;
+        }
+        h3{
+            color: red;
+        }
+        h4{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz App</h1>
+        <h2>Answers</h2>
+        <h2 id="score"></h2>
+    </header>
+    <div class="result"><br><br>
+        <h3>1. What is the capital of Australia?</h3>
+        <h4>Canberra</h4>
+        <h3>2. What is the chemical formula for wahter?</h3>
+        <h4>H2O</h4>
+        <h3>3. What is the value of pie?</h3>
+        <h4>3.14</h4>
+        <h3>4. Which is the king of fruits?</h3>
+        <h4>Durian</h4>
+        <h3>5. At what age did the queen of England died?</h3>
+        <h4>96</h4><br><br>
+        <a href="session36.html"><button>Play Again</button></a>
+    </div>
+    
+</body>
+<script>
+    document.getElementById("score").innerText = 
+    localStorage.score;
+</script>
+</html>
