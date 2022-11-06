@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 20</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(yellow,orange);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: orangered;
+        }
+        canvas{
+            border: 10px solid red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML Canvas</h1>
+    </header>
+    <canvas id="myCanvas" width="400px"height="400px"></canvas>
+    
+</body>
+<script>
+    var draw = document.getElementById("myCanvas");
+    var line = draw.getContext("2d");
+
+    line.moveTo(0,0);
+    line.lineTo(400,400);
+    line.strokeStyle = "blue";
+    line.stroke();
+
+    var line2 = draw.getContext("2d");
+
+    line2.moveTo(0,400);
+    line2.lineTo(400,0);
+    line2.stroke();
+
+    var line3 = draw.getContext("2d");
+
+    line3.moveTo(0,200);
+    line3.lineTo(400,200);
+    line3.stroke();
+
+    var line4 = draw.getContext("2d");
+
+    line4.moveTo(200,0);
+    line4.lineTo(200,400);
+    line4.stroke();
+
+    var circle = draw.getContext("2d");
+
+    circle.beginPath();
+    circle.arc(200,200,50,0,2*Math.PI);
+    circle.stroke();
+    circle.fillStyle = "white"
+    circle.fill();
+
+    var box = draw.getContext("2d");
+
+    box.rect(50,100,300,200);
+    box.stroke();
+</script>
+</html>
